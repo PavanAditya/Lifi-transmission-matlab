@@ -1,0 +1,185 @@
+Library {
+  Name			  "SimulinkLED1v4"
+  Version		  6.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  PostLoadFcn		  ",try, rti_mdl_postloadfcn(bdroot, 'UpdateModel', 19"
+"0, 'rti1005'); catch, disp(lasterr); end, "
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Aug 07 09:26:24 2006"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Po.Hu"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Aug 07 09:27:54 2006"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  StrictBusMsg		  "None"
+  ProdHWDeviceType	  "Specified"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Monospaced"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      "M-S-Function"
+      MFile		      "mlfile"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Monospaced"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Monospaced"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "SimulinkLED1v4"
+    Location		    [372, 188, 621, 400]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      "M-S-Function"
+      Name		      "Simulink LED1"
+      Description	      "-ranges-\n(-inf 0]"
+      Ports		      [1, 1]
+      Position		      [100, 85, 140, 125]
+      ShowName		      off
+      AttributesFormatString  "%<Description>"
+      MFile		      "SimulinkLED_mSfcn4"
+      Parameters	      "outportflag, IconShape, range1, color1, range2,"
+" color2, colorRest"
+      MaskType		      "Simulink LED (M-S-Function)"
+      MaskDescription	      "Used to display status of signal.\n------------"
+"-----------------------------------------------------------------------------"
+"--\n\n'Outport' Checkbox is for displaying the current value,\n the user can "
+"connect the outport with a display block, \nthe value from the outport of LED"
+" is equal to the inport.\n\nThe range syntax:       (-inf 1]\n               "
+"                    (0.5  0.7) \n                                   [0 1]\n  "
+"                                 (2 inf)\nplease make sure that the '-inf' an"
+"d 'inf' are always with \nbrackets '(' and ')'.\n\nHint:\nUsing with only one"
+" Range (should be Range1), \nplease leave Range2 being empty.\n\n------------"
+"-----------------------------------------------------------------------------"
+"--\nversion 1.2, 30.04.2006, Po. Hu\nversion 1.4, Add shape option, 03.08.200"
+"6, Po.Hu"
+      MaskPromptString	      "Outport|Icon Shape|Range1|Color of LED for rang"
+"e1|Range2                         |Color of LED for range2|Color for rest ran"
+"ge(s) if exsit"
+      MaskStyleString	      "checkbox,popup(Round|Rectangular|Triangle|Octag"
+"on),edit,popup(Red|Green|Blue|Cyan|Magenta|Yellow|Gray|Black|White),edit,popu"
+"p(Red|Green|Blue|Cyan|Magenta|Yellow|Gray|Black|White),popup(Red|Green|Blue|C"
+"yan|Magenta|Yellow|Gray|Black|White)"
+      MaskTunableValueString  "on,on,on,on,on,on,on"
+      MaskCallbackString      "||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on"
+      MaskVarAliasString      ",,,,,,"
+      MaskVariables	      "outportflag=@1;IconShape=@2;range1=&3;color1=&4"
+";range2=&5;color2=&6;colorRest=&7;"
+      MaskInitialization      "switch IconShape\n    case 1 % 'Round'\n       "
+" t  = (0:1000)*2*pi/1000;\n        x  = cos(t);\n        y  = sin(t);\n      "
+"  rx = [-0.75 -0.56 -0.15 -0.1 -0.5 -0.67]; % light reflect x\n        ry = ["
+"0.15 0.57 0.7 0.6 0.35 0.1]; % light reflect y\n        cw = [1 1 1]; % light"
+" reflect color\n\n\n    case 2 %'Rectangular'\n        x  = [0 0 1 1];\n     "
+"   y  = [0 1 1 0];\n        rx = [0.1 0.1 0.15 0.85 0.85 0.25 0.2 0.1];\n    "
+"    ry = [0.1 0.8 0.9 0.9 0.85 0.80 0.70 0.15];\n        cw = [1 1 1];\n \n  "
+"  case 3 %'Triangle'\n        x  = [0 0.5*1.732 0.5*1.732];\n        y  = [0."
+"5 1 0 ];\n        rx = [0.3 0.7 0.64];\n        ry = [0.53 0.75 0.61];\n     "
+"   cw = [1 1 1];\n\n    case 4 %'Octagon'\n        t  = (1/16:1/8:1)'*2*pi;\n"
+"        x  = sin(t);\n        y  = cos(t);\n        rx = [-0.8 -0.56 -0.15 -0"
+".1 -0.5 -0.67];\n        ry = [0.15 0.57 0.7 0.6 0.35 0.1];\n        cw = [1 "
+"1 1];\n\n    otherwise\n        error('Can not evaluate the Shape')\nend"
+      MaskDisplay	      "patch(x,y,[1 0 0]);patch([rx],[ry],[cw]);"
+      MaskIconFrame	      off
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "on|Round|(-inf 0]|Red|(0 1]|Green|Black"
+      MaskTabNameString	      ",,,,,,"
+    }
+  }
+}
